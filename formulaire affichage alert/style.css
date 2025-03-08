@@ -1,0 +1,210 @@
+
+
+@keyframes forme
+{
+    0%
+    {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+    25%
+    {
+        background: linear-gradient(to right, #6a11cd, #2575fc);
+    }
+    50%
+    {
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+    }
+    75%
+    {
+        background: linear-gradient(to right, #9a1fff, #fa12e3, #e0a6ff);
+    }
+    100%
+    {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+}
+
+body
+{
+    background: url(./LN2_Wallpaper_1920x1080_01.jpg) no-repeat 50% 50%;
+    justify-items: center;
+}
+
+.formulair
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px 35px 20px 20px;
+    border-radius: 20px;
+    position: relative;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    animation: forme 5s infinite alternate;
+}
+
+.title 
+{
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #00bfff;
+}
+
+.title::before 
+{
+    width: 18px;
+    height: 18px;
+}
+
+.title::after 
+{
+    width: 18px;
+    height: 18px;
+    animation: point 1s linear infinite;
+}
+
+.title::before,
+.title::after 
+{
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #00bfff;
+}
+
+.message, 
+.signin
+{
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.signin 
+{
+    text-align: center;
+}
+
+.signin a:hover 
+{
+    text-decoration: underline royalblue;
+}
+
+.signin a 
+{
+    color: #00bfff;
+}
+
+.premierPartie
+{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.formulair label 
+{
+    position: relative;
+}
+
+.formulair label .input
+{
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 20px 05px 05px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.formulair label .input + span 
+{
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.formulair label .input:placeholder-shown + span 
+{
+    top: 12.5px;
+    font-size: 0.9em;
+}
+
+.formulair label .input:focus + span,
+.formulair label .input:valid + span 
+{
+    color: #00bfff;
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.input 
+{
+    font-size: medium;
+}
+
+.envoyer 
+{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+    background-color: #00bfff;
+}
+
+.envoyer:hover 
+{
+    background-color: #00bfff96;
+}
+
+@keyframes point
+{
+    from 
+    {
+    transform: scale(0.9);
+    opacity: 1;
+    }
+
+    to 
+    {
+    transform: scale(1.8);
+    opacity: 0;
+    }
+}
+
+@media (max-width: 600px)
+{
+    form
+    {
+        padding: 15px;
+    }
+    input
+    {
+        font-size: 14px;
+        padding: 8px;
+    }
+    button
+    {
+        font-size: 16px;
+        padding: 10px;
+    }
+    
+}
