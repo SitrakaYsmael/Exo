@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Devinette</title>
+
+    <link rel="stylesheet" href="./style.css">
+ 
+</head>
+<body>
+
+    <!-- Plan 1 -->
+    <div id="startScreen" class="start">
+        <h1>Vous voulez jouer au jeu ?</h1>
+        <button onclick="startGame()" class="btn">Oui</button>
+        <button onclick="gameOver()" class="btn">Non</button>
+    </div>
+
+    <!-- Plan 2 -->
+    <div id="game" class="hidden">
+        <h1>Essaie de deviner un nombre entre 1 et 100</h1>
+        <input type="number" id="guessInput" min="1" max="100">
+        <button onclick="verifierNombre()" class="btn">Vérifier</button>
+    </div>
+
+    <!-- Plan Game Over -->
+    <div id="gameOver" class="hidden">
+        <h1>GAME OVER</h1>
+        <h1>Echec</h1>
+    </div>
+
+<script src="./script.js"></script>
+</body>
+</html>
